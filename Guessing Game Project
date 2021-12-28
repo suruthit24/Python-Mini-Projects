@@ -1,0 +1,14 @@
+#first define three variables: the secret number, the guesscount and the guess limit
+secret_number = 6
+guess_count = 0 #counting from first try which indicates 0
+guess_limit = 3
+#now do a while loop for the guessing game to reiterate until you guessed it correctly
+while guess_count < guess_limit: #< and not <= because the later gives 4 tries: 0,1,2,3
+    guess = int(input("Guess a number: "))
+    guess_count += 1 #gives us the increment
+    if guess == secret_number:
+        print("Yay! You won! :)")
+        break #terminates the loop 
+    #while statements can also have an else part
+else:
+    print("Sorry, you have failed to guess the right number... :(")
